@@ -5,6 +5,7 @@ import Home from '../pages/Home/Home';
 import SignUp from '../pages/CreateAccount/Components/SignUp';
 import Login from '../pages/Login/Login';
 import CreateAccount from '../pages/CreateAccount/CreateAccount';
+import QuizDetails from '../pages/QuizDetails/QuizDetails';
 
 const Routers = () => {
     return (
@@ -28,6 +29,10 @@ const Routers = () => {
                 <Route
                      path="/home"
                     element={<Home />}
+                />
+                <Route
+                     path="/quiz/:id"
+                    element={<QuizDetails />}
                 />
             </Route>
         </Routes>

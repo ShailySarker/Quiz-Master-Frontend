@@ -9,7 +9,10 @@ import { FaUserCircle } from 'react-icons/fa';
 const Header = () => {
     const navigate = useNavigate();
     const { isLoggedIn, user, setUser, setIsLoggedIn } = useContext(DataContext);
-    console.log(isLoggedIn)
+    // console.log(isLoggedIn)
+    const goHome = () => {
+        navigate("/home")
+    };
     const handleLogOut = () => {
         const confirmLogout = window.confirm("Are you sure you want to log out?");
 
@@ -29,7 +32,7 @@ const Header = () => {
     };
     return (
         <div className="sticky top-0 z-50 border-b-2 bg-white border-amber-400 xl:px-14 lg:px-12 md:px-7 px-5 xl:py-6 lg:py-[14px] md:py-4 py-[14px] flex justify-between">
-            <h2 className="font-bold text-amber-400 xl:text-3xl md:text-2xl text-xl flex items-center lg:gap-2 gap-1"><FcIdea className='xl:text-4xl md:text-3xl text-2xl' />Quiz Master</h2>
+            <h2 onClick={goHome} className="font-bold text-amber-400 xl:text-3xl md:text-2xl text-xl flex items-center lg:gap-2 gap-1"><FcIdea className='xl:text-4xl md:text-3xl text-2xl' />Quiz Master</h2>
             {
                 isLoggedIn ?
                     <div className="flex flex-row md:gap-2 gap-1 items-center justify-end">

@@ -55,7 +55,7 @@ const SendOTP = ({ setIsEmailField, email, setEmail }) => {
                     <Link to="/home">
                         <h2 className="font-bold text-amber-400 xl:text-3xl md:text-2xl text-xl flex items-center lg:gap-2 gap-1"><FcIdea className='xl:text-4xl md:text-3xl text-2xl' />Quiz Master</h2>
                     </Link >
-                   <div className="bg-white min-w-[60%] min-h-[250px]">
+                    <div className="bg-white min-w-[60%] min-h-[250px]">
                         <h2 className="xl:text-xl text-lg font-semibold text-gray-800 xl:py-5 lg:py-4 py-3">Enter Email</h2>
                         {/* Email input */}
                         <input
@@ -75,6 +75,7 @@ const SendOTP = ({ setIsEmailField, email, setEmail }) => {
                             Send OTP
                         </button>
                     </div>
+                    <p className="font-medium text-[#546879] text-center xl:mt-3 lg:mt-2 mt-[6px] text-[15px]">Already have an account? <span className="font-bold text-amber-400"><Link to="/login">Login</Link></span> Now!</p>
                 </div>
             </div>
         </div>

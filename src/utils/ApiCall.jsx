@@ -1,5 +1,6 @@
 import axios from "axios";
-const mainUrl = 'http://localhost:2000/api/v1'
+const mainUrl = 'https://quiz-master-backend-lus8.onrender.com/api/v1'
+// const mainUrl = 'http://localhost:2000/api/v1'
 
 
 const getToken = async () => {
@@ -26,8 +27,8 @@ export const apiCall = async (url, body, cookie) => {
             body,
             { headers }
         );
-        console.log(url)
-        console.log(data)
+        // console.log(url)
+        // console.log(data)
         return data;
     } catch (err) {
         console.log(err);
