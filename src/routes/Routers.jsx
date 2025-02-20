@@ -6,6 +6,7 @@ import SignUp from '../pages/CreateAccount/Components/SignUp';
 import Login from '../pages/Login/Login';
 import CreateAccount from '../pages/CreateAccount/CreateAccount';
 import QuizDetails from '../pages/QuizDetails/QuizDetails';
+import Profile from '../pages/Profile/Profile';
 
 const Routers = () => {
     return (
@@ -27,12 +28,16 @@ const Routers = () => {
                 element={<MainLayouts />}
             >
                 <Route
-                     path="/home"
+                    path="/home"
                     element={<Home />}
                 />
                 <Route
-                     path="/quiz/:id"
+                    path="/quiz/:id"
                     element={<QuizDetails />}
+                />
+                <Route
+                    path='/profile'
+                    element={<Profile />}
                 />
             </Route>
         </Routes>
