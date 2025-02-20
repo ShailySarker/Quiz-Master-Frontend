@@ -1,7 +1,9 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { toast } from 'react-toastify';
-
+import { apiCall } from '../../../utils/ApiCall';
+import quiz from "../../../assets/Image/SignUp_coverPhoto.png";
+import { FcIdea } from 'react-icons/fc';
 const SignUp = ({ givenemail }) => {
     const navigate = useNavigate();
     const [username, setUsername] = useState('');
@@ -80,18 +82,21 @@ const SignUp = ({ givenemail }) => {
 
 
     return (
-        <div className='w-[100%] h-[80vh] flex'>
-            <div className='w-[50%] h-full flex justify-center items-end '>
-                <img src={quiz} alt='quiz' className='w-[100%] h-full object-cover' />
-            </div>
-            <div className='w-[50%] h-full bg-gray-900'>
-                <div className="flex bg-white flex-col justify-center items-center h-full ">
-                    <h2 className="text-2xl font-semibold mb-4 text-gray-800 border-b-2 border-black p-2">Sign Up</h2>
-                    <div className=" p-8 rounded-md flex flex-row flex-wrap gap-3 min-w-[60%] min-h-[250px]">
+        <div className="bg-slate-200 h-screen flex items-center justify-center">
+            <div className="lg:w-[80%] lg:h-[80%] md:w-[70%] w-[90%] h-auto bg-white rounded-2xl shadow-xl flex items-center xl:gap-20 lg:gap-10">
+                <div className='lg:block hidden lg:w-[50%] h-full flex justify-center items-end '>
+                    <img src={quiz} alt='quiz' className='w-[100%] rounded-l-2xl h-full object-cover' />
+                </div>
+                <div className="lg:w-[50%] w-full lg:rounded-r-2xl rounded-2xl lg:py-0 md:py-10 py-6 lg:pr-16 lg:pl-0 md:px-10 px-5 flex bg-white flex-col justify-center items-center h-full ">
+                    <Link to="/">
+                        <h2 className="font-bold text-amber-400 xl:text-3xl md:text-2xl text-xl flex items-center lg:gap-2 gap-1"><FcIdea className='xl:text-4xl md:text-3xl text-2xl' />Quiz Master</h2>
+                    </Link >
+                    <h2 className="xl:text-xl text-lg font-semibold text-gray-800 xl:py-5 lg:py-4 py-3">Create a new account</h2>
+                    <div className="flex flex-row flex-wrap gap-3 min-w-[60%] min-h-[250px]">
                         <input
                             type="text"
                             placeholder="Enter your username"
-                            className={`w-[45%] p-2 mb-4 border ${isValidUsername ? 'border-gray-400' : 'border-red-500'} rounded-md focus:outline-none focus:border-blue-500`}
+                            className={`md:w-[48%] w-full  xl:py-[10px] lg:py-2 py-[6px] xl:px-4 md:px-3 px-[10px] xl:mb-3 mb-2 rounded-xl border ${isValidUsername ? 'border-gray-400' : 'border-red-500'} focus:outline-none focus:border-blue-500`}
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
                         />
@@ -101,7 +106,7 @@ const SignUp = ({ givenemail }) => {
                         <input
                             type="text"
                             placeholder="Enter your first name"
-                            className={`w-[45%] p-2 mb-4 border ${isValidFirstName ? 'border-gray-400' : 'border-red-500'} rounded-md focus:outline-none focus:border-blue-500`}
+                            className={`md:w-[48%] w-full  xl:py-[10px] lg:py-2 py-[6px] xl:px-4 md:px-3 px-[10px] xl:mb-3 mb-2 rounded-xl border ${isValidFirstName ? 'border-gray-400' : 'border-red-500'} focus:outline-none focus:border-blue-500`}
                             value={firstName}
                             onChange={(e) => setFirstName(e.target.value)}
                         />
@@ -111,7 +116,7 @@ const SignUp = ({ givenemail }) => {
                         <input
                             type="text"
                             placeholder="Enter your last name"
-                            className={`w-[45%] p-2 mb-4 border ${isValidLastName ? 'border-gray-400' : 'border-red-500'} rounded-md focus:outline-none focus:border-blue-500`}
+                            className={`md:w-[48%] w-full  xl:py-[10px] lg:py-2 py-[6px] xl:px-4 md:px-3 px-[10px] xl:mb-3 mb-2 rounded-xl border ${isValidLastName ? 'border-gray-400' : 'border-red-500'} focus:outline-none focus:border-blue-500`}
                             value={lastName}
                             onChange={(e) => setLastName(e.target.value)}
                         />
@@ -121,7 +126,7 @@ const SignUp = ({ givenemail }) => {
                         <input
                             type="text"
                             placeholder="Enter your date of birth"
-                            className={`w-[45%] p-2 mb-4 border ${isValidDateOfBirth ? 'border-gray-400' : 'border-red-500'} rounded-md focus:outline-none focus:border-blue-500`}
+                            className={`md:w-[48%] w-full  xl:py-[10px] lg:py-2 py-[6px] xl:px-4 md:px-3 px-[10px] xl:mb-3 mb-2 rounded-xl border ${isValidDateOfBirth ? 'border-gray-400' : 'border-red-500'} focus:outline-none focus:border-blue-500`}
                             value={dateOfBirth}
                             onChange={(e) => setDateOfBirth(e.target.value)}
                         />
@@ -131,7 +136,7 @@ const SignUp = ({ givenemail }) => {
                         <input
                             type="email"
                             placeholder="Enter your email"
-                            className={`w-[45%] p-2 mb-4 border ${isValidEmail ? 'border-gray-400' : 'border-red-500'} rounded-md focus:outline-none focus:border-blue-500`}
+                            className={`md:w-[48%] w-full  xl:py-[10px] lg:py-2 py-[6px] xl:px-4 md:px-3 px-[10px] xl:mb-3 mb-2 rounded-xl border ${isValidEmail ? 'border-gray-400' : 'border-red-500'} focus:outline-none focus:border-blue-500`}
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             readOnly  // Add the readOnly attribute
@@ -142,7 +147,7 @@ const SignUp = ({ givenemail }) => {
                         <input
                             type="password"
                             placeholder="Enter your password"
-                            className={`w-[45%] p-2 mb-4 border ${isValidPassword ? 'border-gray-400' : 'border-red-500'} rounded-md focus:outline-none focus:border-blue-500`}
+                            className={`md:w-[48%] w-full  xl:py-[10px] lg:py-2 py-[6px] xl:px-4 md:px-3 px-[10px] xl:mb-3 mb-2 rounded-xl border ${isValidPassword ? 'border-gray-400' : 'border-red-500'} focus:outline-none focus:border-blue-500`}
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                         />
@@ -152,7 +157,7 @@ const SignUp = ({ givenemail }) => {
                         <input
                             type="password"
                             placeholder="Confirm your password"
-                            className={`w-[45%] p-2 mb-4 border ${isValidConfirmPassword ? 'border-gray-400' : 'border-red-500'} rounded-md focus:outline-none focus:border-blue-500`}
+                            className={`md:w-[48%] w-full  xl:py-[10px] lg:py-2 py-[6px] xl:px-4 md:px-3 px-[10px] xl:mb-3 mb-2 rounded-xl border ${isValidConfirmPassword ? 'border-gray-400' : 'border-red-500'} focus:outline-none focus:border-blue-500`}
                             value={confirmPassword}
                             onChange={(e) => setConfirmPassword(e.target.value)}
                         />
@@ -162,7 +167,7 @@ const SignUp = ({ givenemail }) => {
                         <input
                             type="text"
                             placeholder="Enter your OTP"
-                            className={`w-[45%] p-2 mb-4 border ${isValidOtp ? 'border-gray-400' : 'border-red-500'} rounded-md focus:outline-none focus:border-blue-500`}
+                            className={`md:w-[48%] w-full  xl:py-[10px] lg:py-2 py-[6px] xl:px-4 md:px-3 px-[10px] xl:mb-3 mb-2 rounded-xl border ${isValidOtp ? 'border-gray-400' : 'border-red-500'} focus:outline-none focus:border-blue-500`}
                             value={otp}
                             onChange={(e) => setOtp(e.target.value)}
                         />
@@ -170,12 +175,13 @@ const SignUp = ({ givenemail }) => {
 
                         {/* Signup button */}
                         <button
-                            className="bg-gray-800 text-white p-3 px-8 rounded-md hover:bg-gray-700 focus:outline-none"
+                            className="mt-3 bg-gray-800 text-white xl:py-[10px] lg:py-2 py-[6px] px-8 rounded-xl hover:bg-gray-700 focus:outline-none"
                             onClick={handleSignupClick}
                         >
                             Sign Up
                         </button>
                     </div>
+                    <p className="font-medium text-[#546879] text-center xl:mt-3 lg:mt-2 mt-[6px] text-[15px]">Already have an account? <span className="font-bold text-amber-400"><Link to="/login">Login</Link></span> Now!</p>
                 </div>
             </div>
         </div>
