@@ -6,7 +6,7 @@ const Result = ({ setShowResult, result }) => {
     const navigate = useNavigate();
     return (
         <div className="fixed z-10 inset-0 bg-opacity-80 bg-black flex justify-center items-center">
-            <div className="relative text-black bg-white w-full max-w-md dark:bg-[#121212] justify-evenly space-y-5 p-6 flex flex-col rounded-2xl border">
+            <div className="relative text-black bg-white w-full max-w-md justify-evenly space-y-5 p-6 flex flex-col rounded-2xl border">
                 <button
                     onClick={() => {
                         navigate('/')

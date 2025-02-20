@@ -17,7 +17,6 @@ const Footer = () => {
                     <h2 className="xl:text-2xl md:text-xl text-lg font-bold">Quick Links</h2>
                     <div className="flex md:gap-20 gap-28 xl:mt-7 md:mt-5 mt-3">
                         <div className="flex flex-col xl:gap-3 md:gap-2 gap-[6px] xl:text-lg md:text-base text-sm font-medium">
-                            <Link to="/posts"><ul className="">All Posts</ul></Link>
                             <ul className="">About Us</ul>
                             <ul className="">Contact Us</ul>
                             <ul className="">Help</ul>

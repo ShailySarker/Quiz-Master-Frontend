@@ -8,12 +8,12 @@ import russian from "../../../assets/Image/russian.png";
 import spanish from "../../../assets/Image/spanish.jpg";
 const QuizLanguage = () => {
     const [filter, setFilter] = useState('');
-    const generateContainerStyle = (img) => {
-        return {
-            background: `linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('${img}') lightgray 50% / cover no-repeat`,
-            backdropFilter: 'blur(2px)',
-        };
-    };
+    // const generateContainerStyle = (img) => {
+    //     return {
+    //         background: `linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('${img}') lightgray 50% / cover no-repeat`,
+    //         backdropFilter: 'blur(2px)',
+    //     };
+    // };
 
     return (
         <div className='xl:px-24 lg:px-16 md:px-10 px-5 xl:mb-28 lg:mb-24 md:mb-20 mb-14'>

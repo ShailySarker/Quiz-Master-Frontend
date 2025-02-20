@@ -34,8 +34,8 @@ const LeadershipBoard = () => {
                                 <div className='w-full h-full items-center justify-center text-2xl'>Cant fetch LeaderBoard Sorry!</div> :
                                 <div className='relative md:w-[20%] mb-[70px]'>
                                     <div className='relative top-1/2 lg:w-[100%] md:w-36 w-28 h-full  border-2 hover:scale-105 hover:shadow-2xl  shadow-blur-[3xl] transition-[2s] border-amber-700 xl:p-4 md:p-3 p-2 bg-white rounded-2xl flex flex-col justify-center gap-2'>
-                                        <div className='md:h-[40%] flex items-center justify-center  '>
-                                            <img src={leaderBoardData[0]?.userImage && leaderBoardData[0]?.userImage} alt='image' className='md:w-[45%] w-[50%] rounded-full ' />
+                                        <div className='xl:w-14 xl:h-14 lg:w-12 lg:h-12 md:w-11 md:h-11 w-9 h-9 mx-auto flex items-center justify-center  '>
+                                            <img className="w-full h-full rounded-full" src={leaderBoardData[0]?.userImage && leaderBoardData[0]?.userImage} alt='image' />
                                         </div>
                                         <div className='text-gray-800 font-semibold lg:text-xl md:text-lg text-base text-center'>{leaderBoardData[0]?.userName && leaderBoardData[0]?.userName}</div>
                                         <div>
@@ -44,8 +44,8 @@ const LeadershipBoard = () => {
                                         <div className='absolute top-3 right-2 text-yellow-400'><FaCrown className='text-amber-400 xl:text-3xl lg:text-2xl text-xl' /></div>
                                     </div>
                                     <div className='absolute top-1/2 lg:left-[-110%] md:left-[-130%] left-[-100%] lg:w-[100%] md:w-36 w-28 h-full  border-2 hover:scale-105 hover:shadow-2xl  shadow-blur-[3xl] transition-[2s] border-amber-700 xl:p-4 md:p-3 p-2 bg-white rounded-2xl flex flex-col justify-center gap-2'>
-                                        <div className='md:h-[40%] flex items-center justify-center  '>
-                                            <img src={leaderBoardData[1]?.userImage && leaderBoardData[1]?.userImage} alt='image' className='md:w-[45%] w-[50%] rounded-full ' />
+                                        <div className='xl:w-14 xl:h-14 lg:w-12 lg:h-12 md:w-11 md:h-11 w-9 h-9 mx-auto flex items-center justify-center  '>
+                                            <img className="w-full h-full rounded-full" src={leaderBoardData[1]?.userImage && leaderBoardData[1]?.userImage} alt='image' />
                                         </div>
                                         <div className='text-gray-800 font-semibold lg:text-xl md:text-lg text-base text-center'>{leaderBoardData[1]?.userName && leaderBoardData[1]?.userName}</div>
                                         <div>
@@ -57,8 +57,8 @@ const LeadershipBoard = () => {
                                         </div>
                                     </div>
                                     <div className='absolute top-1/2 lg:right-[-110%] md:right-[-130%] right-[-100%] lg:w-[100%] md:w-36 w-28 h-full  border-2 hover:scale-105 hover:shadow-2xl  shadow-blur-[3xl] transition-[2s] border-amber-700 xl:p-4 md:p-3 p-2 bg-white rounded-2xl flex flex-col justify-center gap-2'>
-                                        <div className='md:h-[40%] flex items-center justify-center  '>
-                                            <img src={leaderBoardData[2]?.userImage && leaderBoardData[2]?.userImage} alt='image' className='md:w-[45%] w-[50%] rounded-full ' />
+                                        <div className='xl:w-14 xl:h-14 lg:w-12 lg:h-12 md:w-11 md:h-11 w-9 h-9 mx-auto flex items-center justify-center  '>
+                                            <img className="w-full h-full rounded-full" src={leaderBoardData[2]?.userImage && leaderBoardData[2]?.userImage} alt='image' />
                                         </div>
                                         <div className='text-gray-800 font-semibold lg:text-xl md:text-lg text-base text-center'>{leaderBoardData[2]?.userName && leaderBoardData[2]?.userName}</div>
                                         <div>

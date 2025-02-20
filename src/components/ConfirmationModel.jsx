@@ -7,11 +7,11 @@ const ConfirmationModel = ({ setOpenConfirmation, navigateToQuiz }) => {
     }
     return (
         <div className="fixed z-10 inset-0 bg-opacity-80 bg-black flex justify-center items-center">
-            <div className="relative text-black bg-white w-full max-w-md dark:bg-[#121212] justify-evenly space-y-5 p-6 flex flex-col rounded-2xl border">
+            <div className="relative text-black bg-white w-full max-w-md justify-evenly space-y-5 p-6 flex flex-col rounded-2xl border">
                 <button
                     onClick={onCancel}
                 >
-                    <MdCancel className="absolute top-2 right-2 dark:text-white text-black" size={30} />
+                    <MdCancel className="absolute top-2 right-2 text-black" size={30} />
                 </button>
                 <div className="xl:text-4xl lg:text-3xl md:text-2xl text-xl font-semibold mb-2">Quiz Confirmation</div>
                 <p className="mb-4">
