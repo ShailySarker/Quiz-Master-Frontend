@@ -4,14 +4,6 @@ import { apiCallGet } from '../../../utils/ApiCall';
 import Spinner from '../../../components/Spinner';
 
 const LeadershipBoard = () => {
-    const [filter, setFilter] = useState('');
-    const generateContainerStyle = (img) => {
-        return {
-            background: `linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('${img}') lightgray 50% / cover no-repeat`,
-            backdropFilter: 'blur(2px)',
-        };
-    };
-
     const [leaderBoardData, setLeaderBoardData] = useState(null);
     const [isLoader, setIsLoader] = useState(false);
 
@@ -28,13 +20,13 @@ const LeadershipBoard = () => {
     }, [])
 
     return (
-        <div className='w-[100%] xl:h-[450px] lg:h-[420px] md:h-[350px] flex flex-col items-center justify-between xl:px-24 lg:px-16 md:px-10 px-5 shadow-md'>
-            <div className='w-[80%] xl:text-4xl lg:text-3xl md:text-2xl text-xl gap-3 font-semibold  items-center flex justify-center'>
+        <div className='w-[100%] xl:h-[450px] lg:h-[420px] md:h-[350px] flex flex-col items-center justify-between xl:px-24 lg:px-16 md:px-10 px-5'>
+            <div className='xl:text-4xl lg:text-3xl md:text-2xl text-xl font-semibold gap-3 items-center flex justify-center'>
                 <FaCrown className='text-amber-400' />
                 <div className='text-center'>Leadership Board Ranking</div>
                 <FaCrown className='text-amber-400' />
             </div>
-            <div className='w-full h-full flex  items-center justify-center  rounded-full px-5 py-2 bg-amber-200 xl:mt-6 lg:mt-5 md:mt-4 mt-3'>
+            <div className='w-full h-full flex  items-center justify-center  rounded-full px-5 py-2 bg-amber-200 shadow-md xl:mt-6 lg:mt-5 md:mt-4 mt-3'>
                 {
                     isLoader ? <Spinner /> : <>
                         {
