@@ -88,7 +88,7 @@ const SignUp = ({ givenemail }) => {
                     <img src={quiz} alt='quiz' className='w-[100%] rounded-l-2xl h-full object-cover' />
                 </div>
                 <div className="lg:w-[50%] w-full lg:rounded-r-2xl rounded-2xl lg:py-0 md:py-10 py-6 lg:pr-16 lg:pl-0 md:px-10 px-5 flex bg-white flex-col justify-center items-center h-full ">
-                    <Link to="/">
+                    <Link to="/home">
                         <h2 className="font-bold text-amber-400 xl:text-3xl md:text-2xl text-xl flex items-center lg:gap-2 gap-1"><FcIdea className='xl:text-4xl md:text-3xl text-2xl' />Quiz Master</h2>
                     </Link >
                     <h2 className="xl:text-xl text-lg font-semibold text-gray-800 xl:py-5 lg:py-4 py-3">Create a new account</h2>

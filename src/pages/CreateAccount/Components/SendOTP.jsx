@@ -52,16 +52,16 @@ const SendOTP = ({ setIsEmailField, email, setEmail }) => {
                     <img src={quiz} alt='quiz' className='w-[100%] rounded-l-2xl h-full object-cover' />
                 </div>
                 <div className="lg:w-[50%] w-full lg:rounded-r-2xl rounded-2xl lg:py-0 md:py-10 py-6 lg:pr-16 lg:pl-0 md:px-10 px-5 flex bg-white flex-col justify-center items-center h-full ">
-                    <Link to="/">
+                    <Link to="/home">
                         <h2 className="font-bold text-amber-400 xl:text-3xl md:text-2xl text-xl flex items-center lg:gap-2 gap-1"><FcIdea className='xl:text-4xl md:text-3xl text-2xl' />Quiz Master</h2>
                     </Link >
-                   <div className="bg-white p-8 rounded-md min-w-[60%] min-h-[250px]">
-                        <h2 className="xl:text-xl text-lg font-semibold mb-4 text-gray-800">Enter Email</h2>
+                   <div className="bg-white min-w-[60%] min-h-[250px]">
+                        <h2 className="xl:text-xl text-lg font-semibold text-gray-800 xl:py-5 lg:py-4 py-3">Enter Email</h2>
                         {/* Email input */}
                         <input
                             type="email"
                             placeholder="Enter your email"
-                            className={`w-full xl:py-[10px] lg:py-2 py-[6px] xl:px-4 md:px-3 px-[10px] xl:mb-3 mb-2 border ${isValidEmail ? 'border-gray-400' : 'border-red-500'} rounded-md focus:outline-none focus:border-blue-500`}
+                            className={`w-full xl:py-[10px] lg:py-2 py-[6px] xl:px-4 md:px-3 px-[10px] xl:mb-3 mb-2 rounded-xl border ${isValidEmail ? 'border-gray-400' : 'border-red-500'} focus:outline-none focus:border-blue-500`}
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                         />
@@ -69,7 +69,7 @@ const SendOTP = ({ setIsEmailField, email, setEmail }) => {
 
                         {/* Send OTP button */}
                         <button
-                            className="bg-gray-800 text-white xl:py-[10px] lg:py-2 py-[6px] px-8 mt-3 rounded-md hover:bg-gray-700 focus:outline-none"
+                            className="bg-gray-800 text-white xl:py-[10px] lg:py-2 py-[6px] px-8 mt-3 rounded-xl hover:bg-gray-700 focus:outline-none"
                             onClick={handleSendOtpClick}
                         >
                             Send OTP
