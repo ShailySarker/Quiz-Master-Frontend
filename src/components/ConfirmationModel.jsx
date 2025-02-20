@@ -7,7 +7,7 @@ const ConfirmationModel = ({ setOpenConfirmation, navigateToQuiz }) => {
     }
     return (
         <div className="fixed z-10 inset-0 bg-opacity-80 bg-black flex justify-center items-center">
-            <div className="relative text-white bg-white w-full max-w-md dark:bg-[#121212] justify-evenly space-y-5 p-6 flex flex-col rounded-2xl border">
+            <div className="relative text-black bg-white w-full max-w-md dark:bg-[#121212] justify-evenly space-y-5 p-6 flex flex-col rounded-2xl border">
                 <button
                     onClick={onCancel}
                 >
@@ -23,15 +23,15 @@ const ConfirmationModel = ({ setOpenConfirmation, navigateToQuiz }) => {
                     <li>You cannot pause or restart the quiz once started.</li>
                     {/* Add more instructions as needed */}
                 </ul>
-                <div className="flex justify-between">
+                <div className="flex gap-4">
                     <button
-                        className="button dark:bg-green-700 bg-black hover:bg-white hover:text-black rounded-lg px-8 py-2"
+                        className="bg-green-700 font-semibold text-white rounded-lg px-8 py-2 w-[50%]"
                         onClick={navigateToQuiz}
                     >
                         Yes
                     </button>
                     <button
-                        className="button dark:bg-red-700 bg-black hover:bg-white hover:text-black rounded-lg px-8 py-2"
+                        className="bg-red-700 font-semibold text-white rounded-lg px-8 py-2 w-[50%]"
                         onClick={onCancel}
                     >
                         No
