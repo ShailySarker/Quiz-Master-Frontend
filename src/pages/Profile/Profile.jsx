@@ -43,10 +43,10 @@ const Profile = () => {
 
 
     return (
-        <div className="md:w-[80%] mx-auto xl:px-24 lg:px-16 md:px-10 px-5 my-8 flex flex-col lg:gap-5 gap-4">
+        <div className="xl:mb-28 lg:mb-20 md:mb-16 mb-12 lg:w-[80%] mx-auto xl:px-24 lg:px-16 md:px-10 px-5 my-8 flex flex-col lg:gap-5 gap-4">
             {/* User Detail */}
             <div className="bg-gray-100 xl:p-6 lg:p-5 p-4 rounded-md shadow-md">
-                <h2 className="xl:text-3xl md:text-2xl text-xl font-bold mb-4 text-center">User Details</h2>
+                <h2 className="xl:text-3xl md:text-2xl text-xl font-bold xl:mb-10 lg:mb-8 md:mb-6 mb-5 text-center">User Details</h2>
                 <div className='flex md:flex-row flex-col md:gap-0 gap-3 items-start md:justify-around md:items-center xl:mb-4 md:mb-3 mb-2'>
                     <div className="flex items-center">
                         <img className="rounded-full xl:w-20 xl:h-20 lg:h-16 lg:w-16 md:h-14 md:w-14 w-12 h-12 mr-4" src={user?.image} alt="User Avatar" />
@@ -64,7 +64,7 @@ const Profile = () => {
 
             {/* User Progress */}
             <div className="bg-gray-100 xl:p-6 lg:p-5 p-4 rounded-md shadow-md">
-                <h2 className="xl:text-3xl md:text-2xl text-xl font-bold mb-4 text-center">User Progress</h2>
+                <h2 className="xl:text-3xl md:text-2xl text-xl font-bold xl:mb-10 lg:mb-8 md:mb-6 mb-5 text-center">User Progress</h2>
                 <ul className='flex justify-around gap-5 md:flex-wrap flex-nowrap md:flex-row flex-col xl:mb-4 md:mb-3 mb-2'>
                     {
                         userProgress === null ? <div>Nothing to Show</div> :
@@ -83,7 +83,7 @@ const Profile = () => {
 
             {/* User Previous quizzes */}
             <div className="bg-gray-100 xl:p-6 lg:p-5 p-4 rounded-md shadow-md">
-                <h2 className="xl:text-3xl md:text-2xl text-xl font-bold mb-4 text-center">User's Previous Quizzes</h2>
+                <h2 className="xl:text-3xl md:text-2xl text-xl font-bold xl:mb-10 lg:mb-8 md:mb-6 mb-5 text-center">User's Previous Quizzes</h2>
                 <ul>
                     {
                         prevQuizzes === null ? <div className='text-center'>No Previous Quiz Available</div> :

@@ -21,7 +21,7 @@ const QuizDetails = () => {
             setQuizDetail(response.data[0]);
             // Initialize selectedOptions state with default values
             const initialSelectedOptions = response.data[0].questionsDetails.map((question) => ({
-                questionId: question._id,
+                questionId: question?._id,
                 selectedOption: null,
             }));
             setSelectedOptions(initialSelectedOptions);
